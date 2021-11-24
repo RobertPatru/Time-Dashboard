@@ -1,0 +1,134 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    /* background: linear-gradient(to right bottom, hsl(226, 43%, 10%), hsl(235, 46%, 27%), hsl(264, 60%, 33%)); */
+    background: url("/img/bg-01.jpg") no-repeat center center/cover;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.container-landing-page {
+    background: white;
+    height: 600px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    font-size: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-message {
+    padding: 0 30px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.div-email,
+.div-password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/* this will put the bottom line under email and password input */
+.label-email + div,
+.label-password + div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    line-height: 1.8;
+}
+
+.label-email,
+.label-password {
+    font-size: 15px;
+}
+
+#email-adress,
+#password {
+    font-size: 17px;
+}
+
+.fa-user,
+.fa-lock {
+    margin: 0 5px;
+}
+
+.log-in-btn {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, rgb(27, 124, 67), hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    background: url("/img/bg-01.jpg") no-repeat center center/cover;
+    padding: 10px 20px;
+    width: 90%;
+    border-radius: 30px;
+    transition: all 0.2s linear;
+    margin-top: 20px;
+}
+
+.log-in-btn:hover {
+    opacity: 0.8;
+}
+
+.or {
+    margin: 20px 0;
+}
+
+.joke {
+    background: white;
+    z-index: 50;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+.joke::after {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    background: url("/img/2.jpg") no-repeat center center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+}
