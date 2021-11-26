@@ -26,6 +26,7 @@ input {
     outline: none;
 }
 
+/* LOG IN PAGE */
 .container-landing-page {
     background: white;
     height: 600px;
@@ -72,6 +73,7 @@ input {
 .label-password + div {
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     line-height: 1.8;
+    width: 250px
 }
 
 .label-email,
@@ -89,7 +91,7 @@ input {
     margin: 0 5px;
 }
 
-.log-in-btn {
+.btn {
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
@@ -103,7 +105,7 @@ input {
     margin-top: 20px;
 }
 
-.log-in-btn:hover {
+.btn:hover {
     opacity: 0.8;
 }
 
@@ -111,24 +113,35 @@ input {
     margin: 20px 0;
 }
 
-.joke {
-    background: white;
-    z-index: 50;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: 1;
+.sing-up-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: all 0.2s linear;
+    color: rgba(0, 0, 0, 0.6);
 }
 
-.joke::after {
-    content: '';
-    height: 100vh;
-    width: 100vw;
-    background: url("/img/2.jpg") no-repeat center center;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: 1000;
+
+.sing-up-btn:hover,.already-an-account-btn:hover {
+    background-color: #eee;
+}
+
+
+/* REGISTER PAGE */
+.welcome-message-register{
+    margin: 40px 0;
+    margin-top: 70px;
+    font-size: 30px;
+}
+
+#register-account {
+    margin-bottom: 25px;
+}
+
+.already-an-account-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: all 0.2s linear;
+    color: rgba(0, 0, 0, 0.6);
 }
