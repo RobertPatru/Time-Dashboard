@@ -18,7 +18,7 @@ class LonIn {
                     console.log(emails[i] + `   ` + passwords[i] + ` i = ` + i);
                     window.location.href = '/dashboard.html';
                     break;
-                } else {
+                } else if (i === emails.length){
                     console.log('Account NOT found');
                 }
             }
