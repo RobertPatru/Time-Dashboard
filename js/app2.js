@@ -5,8 +5,28 @@ class LonIn {
         this.password = password;
     }
 
+    searchForAccount() {
+        let emails;
+        let passwords;
+
+        if (localStorage.getItem('email') != null && localStorage.getItem('password') != null) {
+            emails = JSON.parse(localStorage.getItem('email'));
+            passwords = JSON.parse(localStorage.getItem('password'));
+
+            for (let i = 0; i < emails.length; i++) {
+                if (emails[i] == this.email && passwords[i] == this.password) {
+                    console.log(emails[i] + `   ` + passwords[i] + ` i = ` + i);
+                    window.location.href = '/dashboard.html';
+                    break;
+                } else {
+                    console.log('Account NOT found');
+                }
+            }
+        }
+    }
+
     confirmAccountCompletion() {
-        if (this.password == '' || this.email == '') {
+        if (this.password == '' || this.email == '' || this.email.includes('@') != true) {
             document.querySelector('.div-log-in-email').style.borderColor = 'red';
             document.querySelector('.div-log-in-email .fa-user').style.color = 'red';        
             document.querySelector('.div-log-in-password').style.borderColor = 'red';
@@ -21,16 +41,8 @@ class LonIn {
             document.querySelector('.div-log-in-password .fa-lock').style.color = 'black'; 
             }, 3000);
         }
-        else if (this.password != '' && this.email != '') {
-            let searchInLocalStorage = localStorage;
-            
-            for (let i = 0; i < searchInLocalStorage.length; i++) {
-                console.log(searchInLocalStorage.length);
-                console.log(searchInLocalStorage[i]);
-                if (searchInLocalStorage[i] == this.email) {
-                    console.log ("account found");
-                }
-            }
+        else if (this.password != '' && this.email != '' && this.email.includes('@') == true) {
+            return true;
         }
     } 
 }
@@ -40,7 +52,10 @@ document.getElementById('log-in-btn').addEventListener('click', function(object)
     const password = document.getElementById('log-in-password').value;
 
     const logIn = new LonIn(email, password);
-    logIn.confirmAccountCompletion();
+    if (logIn.confirmAccountCompletion() === true) {
+        logIn.searchForAccount();
+    }
+    
     
 
     object.preventDefault();
