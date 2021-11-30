@@ -7,7 +7,7 @@ class Account {
     }
 
     confirmPasswordFunction() {
-        if (this.password != this.confirmPassword || this.password == '' || this.confirmPassword == '' || this.email == '' || this.email.includes('@') != true) {
+        if (this.password != this.confirmPassword || this.password == '' || this.confirmPassword == '' || this.email == '' || this.email.includes('@') != true || this.email.length > 7 || this.password.length > 7) {
             document.querySelector('.sub-div-password').style.borderColor = 'red';
             document.querySelector('.sub-div-password .fa-lock').style.color = 'red';
             document.querySelector('.sub-div-confirm-password').style.borderColor = 'red';
@@ -25,7 +25,7 @@ class Account {
             document.querySelector('.sub-div-email .fa-user').style.color = 'black'; 
             }, 3000);
         }
-        else if (this.password == this.confirmPassword && this.password != '' && this.email.includes('@') == true) {
+        else if (this.password == this.confirmPassword && this.password != '' && this.email.includes('@') == true && this.email.length > 7 && this.password.length > 7) {
             document.querySelector('.container-sing-in-page').style.display = 'none';
             document.querySelector('.welcome-message-register').textContent = 'Account Successfully Created';
 
