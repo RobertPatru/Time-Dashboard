@@ -1,0 +1,207 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    /* background: url("/img/bg-01.jpg") no-repeat center center/cover; */
+    background: rgba(13, 19, 35, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+/* ####################################            Dashboard Page */
+.background-dashboard-page {
+    height: 200%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 19, 35, 1);
+}
+.container-dashboard-page {
+    width: 90%;
+}
+
+/* Profile Section  -  Upper section*/
+.profile-container {
+    background: rgba(29, 32, 76, 1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.upper-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: rgb(74, 133, 189); */
+    background: rgb(87, 70, 234);
+    border-radius: 10px;
+}
+
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    margin: 20px 0;
+    border-radius: 50%;
+    border: 2px rgb(241, 227, 200) solid;
+    object-fit: cover;
+}
+
+.profile-picture:hover {
+    cursor: pointer;
+    border: 2px orange solid;
+    /* border: 2px #333 solid; */
+}
+
+.profile-name {
+    color: white;
+    background: transparent;
+
+    font-size: 25px;
+    font-weight: 500;
+    width: 50%;
+}
+
+.profile-name:hover {
+    cursor: pointer;
+}
+
+/* Bottom Section */
+.time-period {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.time-period-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.time-period-item:hover {
+    cursor: pointer;
+    background: rgba(103, 110, 211, 0.7);
+}
+
+.time-period-item:active {
+    cursor: pointer;
+    background: rgba(103, 110, 211, 0.9);
+}
+
+/* Activities */
+
+.activity-container {
+    margin: 30px 0;
+    background: rgba(29, 32, 76, 1);
+    border-radius: 10px;
+}
+
+.activity-header {
+    height: 45px;
+    border-radius: 10px 10px 10px 10px;
+   
+}
+
+.activity-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-type-and-time {
+    color: white;
+    font-size: 18px;
+}
+
+.container-options-and-all-time {
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.type,
+.time,
+.settings,
+.all-period-time {
+    margin: 10px 0;
+}
+
+.work {
+    background: url('/img/icon-work.svg') no-repeat center right;
+    background-color: rgba(255, 139, 100, 1);
+}
+
+.play {
+    background: url('/img/icon-play.svg') no-repeat center right;
+    background-color: rgba(86, 194, 230, 1);
+}
+
+.study {
+    background: url('/img/icon-study.svg') no-repeat center right;
+    background-color: rgba(255, 94, 125, 1);
+}
+
+.exercise {
+    background: url('/img/icon-exercise.svg') no-repeat center right;
+    background-color: rgba(75, 207, 131, 1);
+}
+
+.social {
+    background: url('/img/icon-social.svg') no-repeat center right;
+    background-color: rgba(114, 53, 209, 1);
+}
+
+.self-care {
+    background: url('/img/icon-self-care.svg') no-repeat center right;
+    background-color: rgba(241, 199, 91, 1);
+}
+
+/* ################## For JS */
+#file {
+    display: none;
+}
+
+.profile-picture-container {
+    position: relative;
+}
+
+#uploadBtn {
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+
+    color: white;
+    background: #333;
+
+    font-size: 12px;
+    padding: 5px 6px;
+    border: 1px grey solid;
+    border-radius: 50%;
+}
+
+#uploadBtn:hover {
+    cursor: pointer;
+    background: rgba(51, 51, 51, 0.8);
+    border: 1px rgb(255, 255, 255) solid;
+}

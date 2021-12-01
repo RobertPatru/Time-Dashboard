@@ -9,11 +9,121 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&family=Kumbh+Sans:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/mobile.css">
+    <!-- <link rel="stylesheet" href="/css/mobile.css"> -->
+    <link rel="stylesheet" href="/css/dashboard-style-mobile.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-    You are loged in!
+    <!-- <div class="background-dashboard-page"> -->
+        <div class="container-dashboard-page">
+            <div class="profile-container">
+                <div class="upper-section">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture"  id="photo">
+                        <input type="file"  id="file">
+                        <label for="file" id="uploadBtn" ><i class="fas fa-camera"></i></label>
+                    </div>          
+                    <!-- <p class="profile-name">Patru Robert</p> -->
+                    <input type="text" class="profile-name" value="Patru Robert">
+                </div>
+                <div class="bottom-section">
+                    <ul class="time-period">
+                        <li class="time-period-item">Daily</li>
+                        <li class="time-period-item">Weakly</li>
+                        <li class="time-period-item">Monthly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="activity-container">
+                <div class="activity-header work"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Work</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="activity-container">
+                <div class="activity-header play"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Play</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity-container">
+                <div class="activity-header study"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Study</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-container">
+                <div class="activity-header exercise"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Exercise</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-container">
+                <div class="activity-header social"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Social</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-container">
+                <div class="activity-header self-care"></div>
+                <div class="activity-body">
+                    <div class="container-type-and-time">
+                        <p class="type">Self Care</p>
+                        <p class="time">32hrs</p>
+                    </div>
+                    <div class="container-options-and-all-time">
+                        <div class="settings">. . .</div>
+                        <div class="all-period-time">Last Week - 36 hrs</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <!-- </div> -->
+
+    <script src="/js/dashboard.js"></script>
 </body>
 </html>
