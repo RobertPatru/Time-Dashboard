@@ -275,7 +275,7 @@ input {
     }
 
     .container-dashboard-page {
-        width: 80%;
+        width: 90%;
     }
 
     .container-dashboard-page {
@@ -293,6 +293,7 @@ input {
     .profile-container {
         grid-area: profile;
         height: 100%;
+        width: 100%;
         margin: 0%;
     }
 
@@ -419,6 +420,13 @@ input {
         padding: 20px;
     }
 }
+
+@media (min-width: 1300px) {
+    .container-dashboard-page {
+        width: 80%;
+    }
+}
+
 
 @media (min-width: 1600px) {
     .container-dashboard-page {

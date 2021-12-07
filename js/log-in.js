@@ -4,7 +4,7 @@ class LonIn {
         this.email = email;
         this.password = password;
     }
-
+    
     searchForAccount() {
         let emails;
         let passwords;
@@ -16,7 +16,14 @@ class LonIn {
             for (let i = 0; i < emails.length; i++) {
                 if (emails[i] == this.email && passwords[i] == this.password) {
                     console.log(emails[i] + `   ` + passwords[i] + ` i = ` + i);
-                    window.location.href = '/dashboard.html';
+
+                    document.querySelector('.container-landing-page').innerHTML = '';
+                    document.querySelector('.container-landing-page').style.background = "url('/img/Loading2.gif') no-repeat center center/cover";
+
+                    setTimeout(function(){
+                        window.location.href = '/dashboard.html';
+                    }, 3000);
+                    
                     break;
                 } else if (i === emails.length - 1){
                     document.querySelector('.div-log-in-email').style.borderColor = 'red';
